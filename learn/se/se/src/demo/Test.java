@@ -1,11 +1,16 @@
 package demo;
 
-abstract class A {
-    public void test() {
-        System.out.println(1);
-    }
+abstract class A implements Animals{}
 
-    public abstract void a();
+interface dogs extends Animals {}
+
+
+class Cat implements Animals {
+
+    @Override
+    public void eat() {
+
+    }
 }
 
 public class Test {
