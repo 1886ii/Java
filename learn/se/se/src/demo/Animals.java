@@ -17,3 +17,26 @@ public interface Animals {
         System.out.println(1);
     }
 }
+
+
+class B {
+    public void a() {
+        System.out.println(11);
+    }
+}
+
+class C  extends B implements Animals{
+    public static void main(String[] args) {
+        C c = new C();
+        c.a();
+    }
+
+    @Override
+    public void eat() {
+
+    }
+}
+
+
+
+
