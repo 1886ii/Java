@@ -1,5 +1,15 @@
 package impls;
 
+import java.util.Comparator;
+
+class ScoreComparator implements Comparator<Student> {
+
+    @Override
+    public int compare(Student o1, Student o2) {
+        return o1.score - o2.score;
+    }
+}
+
 public class Student implements Comparable<Student>{
     public int age;
     public int score;
@@ -18,5 +28,12 @@ public class Student implements Comparable<Student>{
 
         int i = s1.compareTo(s2);
         System.out.println(i);
+
+        ScoreComparator scoreComparator = new ScoreComparator();
+        int j = scoreComparator.compare(s1, s2);
+        System.out.println(j);
+
+        String s = "abcd";
+        System.out.println(s.compareTo("abc"));
     }
 }
