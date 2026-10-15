@@ -18,7 +18,7 @@ create table if not exists user (
 desc user;
 
 insert into user(id, username, account, ip) value (null,'1','1','1');
-
+insert into user(id, username, account, ip) value (null,2,2,'1');  # 支持隐式类型转换
 
 select * from user;
 
@@ -29,6 +29,6 @@ delete from user where id = 1;
 alter table user
     add email varchar(256) default '0' after ip,
     modify account char(25) not null ,
-drop username,
+    drop username,
     rename column id to uid;
 
