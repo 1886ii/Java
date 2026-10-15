@@ -21,6 +21,8 @@ insert into user(id, username, account, ip) value (null,'1','1','1');
 insert into user(id, username, account, ip) value (null,2,2,'1');  # 支持隐式类型转换
 
 select * from user;
+select username name from user;
+select username as name from user;
 
 update user set username = '2' where id = 1;
 
