@@ -9,8 +9,8 @@ show tables;
 
 drop table  user;
 create table if not exists user (
-                                    id int primary key auto_increment,
-                                    username varchar(256),
+    id int primary key auto_increment,
+    username varchar(256),
     account varchar(256) not null,
     ip varchar(256)
     );
@@ -34,3 +34,6 @@ alter table user
     drop username,
     rename column id to uid;
 
+insert into user(username, account) values(null,1) ,(null,2), (null, 3);
+select * from user where username <=> null;     # null = null  false   null <=> null true
+select * from user where username = null;
