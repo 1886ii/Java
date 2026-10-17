@@ -37,3 +37,16 @@ alter table user
 insert into user(username, account) values(null,1) ,(null,2), (null, 3);
 select * from user where username <=> null;     # null = null  false   null <=> null true
 select * from user where username = null;
+
+
+
+select * from user;
+
+insert into user value ('100zs', '100zs','1212',1);
+
+select * from user where id = '1zs';
+
+desc user;
+
+select current_date,current_time, now();
+select CURTIME(),CURDATE(), NOW();
