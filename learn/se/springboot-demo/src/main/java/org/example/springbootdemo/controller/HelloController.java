@@ -51,4 +51,9 @@ public class HelloController {
         file.transferTo(new File("D:"));
         return file.getName();
     }
+
+    @RequestMapping("/cookie")
+    public Object getCookie(@CookieValue("name")String name) {
+        return name;
+    }
 }
