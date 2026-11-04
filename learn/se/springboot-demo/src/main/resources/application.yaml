@@ -1,3 +1,12 @@
 spring:
   application:
     name: springboot-demo
+server:
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+        # secure: true  # HTTPS环境打开
+      timeout: 2h # 全局默认闲置超时，代码里会覆盖
+

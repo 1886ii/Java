@@ -1,5 +1,7 @@
 package org.example.springbootdemo.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.example.springbootdemo.entity.Student;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -54,6 +56,15 @@ public class HelloController {
 
     @RequestMapping("/cookie")
     public Object getCookie(@CookieValue("name")String name) {
+        return name;
+    }
+
+    @RequestMapping("/session")
+    public Object getSession(HttpServletRequest request) {
+        HttpSession session = request.getSession(true);  // true表示没有获取到session就创建一个 无参默认true
+        session.setAttribute("name",new Student());
+
+        Object name = session.getAttribute("name");
         return name;
     }
 }
