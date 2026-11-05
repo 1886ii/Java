@@ -11,6 +11,8 @@ class B {
 public class A {
     public C c;
 
+    public B b;
+
     public static void main(String[] args) {
         A a = new A();
     }
