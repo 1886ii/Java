@@ -3,6 +3,7 @@ package org.example.springbootdemo.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.example.springbootdemo.entity.Student;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,6 +13,10 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/learn")
 public class HelloController {
+
+    @Value("${trai.config.path}")
+    public String config;
+
     @GetMapping("/get")
     public Object getRequest(String username) {
         return "你好" + username;

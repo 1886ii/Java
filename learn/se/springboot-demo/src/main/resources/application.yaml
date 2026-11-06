@@ -10,4 +10,7 @@ server:
         # secure: true  # HTTPS环境打开
       timeout: 2h # 全局默认闲置超时，代码里会覆盖
   port: 8888
+trai:
+  config:
+    path: re
 
