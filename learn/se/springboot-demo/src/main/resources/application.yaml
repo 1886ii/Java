@@ -13,4 +13,6 @@ server:
 trai:
   config:
     path: re
+    name: ~ # 表示null
+    password: 123
 
