@@ -15,6 +15,6 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/**")
-                .excludePathPatterns("/user/login"); // 登录接口放行
+                .excludePathPatterns("/user/login", "/code/get"); // 登录接口放行
     }
 }
