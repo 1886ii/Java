@@ -15,4 +15,11 @@ trai:
     path: re
     name: ~ # 表示null
     password: 123
+    student:  # 配置集合
+      - ys
+      - yb
+    map:
+      k1: v1
+      k2: v2
+      k3: v3
 
