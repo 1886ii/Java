@@ -1,6 +1,8 @@
 spring:
   application:
     name: springboot-demo
+    # 数据源
+
 server:
   servlet:
     session:
